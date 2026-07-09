@@ -201,20 +201,27 @@ function buildToc(r) {
 }
 
 /* ── Modal: reading progress + scroll-spy ────────────────── */
+let scrollTicking = false;
 function onModalScroll() {
-  const scrollTop = overlay.scrollTop;
-  const scrollable = overlay.scrollHeight - overlay.clientHeight;
-  const pct = scrollable > 0 ? (scrollTop / scrollable) * 100 : 0;
-  progressBar.style.width = `${Math.min(pct, 100)}%`;
+  if (scrollTicking) return;
+  scrollTicking = true;
+  requestAnimationFrame(() => {
+    // Read all layout first, then write once, to avoid scroll-time reflow.
+    const scrollTop = overlay.scrollTop;
+    const scrollable = overlay.scrollHeight - overlay.clientHeight;
+    const marker = scrollTop + overlay.clientHeight * 0.28;
 
-  // Highlight the current section in the TOC.
-  const marker = overlay.scrollTop + overlay.clientHeight * 0.28;
-  let currentId = null;
-  tocLinks.forEach(link => {
-    const sec = document.getElementById(link.dataset.target);
-    if (sec && !sec.hidden && sec.offsetTop <= marker) currentId = link.dataset.target;
+    let currentId = null;
+    tocLinks.forEach(link => {
+      const sec = document.getElementById(link.dataset.target);
+      if (sec && !sec.hidden && sec.offsetTop <= marker) currentId = link.dataset.target;
+    });
+
+    const pct = scrollable > 0 ? Math.min((scrollTop / scrollable) * 100, 100) : 0;
+    progressBar.style.width = `${pct}%`;
+    tocLinks.forEach(link => link.classList.toggle('current', link.dataset.target === currentId));
+    scrollTicking = false;
   });
-  tocLinks.forEach(link => link.classList.toggle('current', link.dataset.target === currentId));
 }
 
 /* ── Modal ───────────────────────────────────────────────── */
