@@ -3,22 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Monthly Wallstreet. Independent investment research. Monthly deep dives into equities, commodities, real estate, and digital assets. Rigorous analysis, specific price targets, full accountability.">
-  <title>Monthly Wallstreet. Investment Research Repository</title>
+  <meta name="description" content="Monthly Wallstreet publishes one investment thesis a month. Each report locks in the macro data, price target, and risk framework on its publication date, then records the outcome.">
+  <meta name="color-scheme" content="dark">
+  <title>Monthly Wallstreet — Investment Research Repository</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23070c18'/%3E%3Crect x='1.5' y='1.5' width='29' height='29' rx='4.5' fill='none' stroke='%23D4AF37' stroke-width='1.5'/%3E%3Ctext x='16' y='20.5' font-family='Georgia%2Cserif' font-size='12' font-weight='700' fill='%23D4AF37' text-anchor='middle' letter-spacing='1'%3EMW%3C/text%3E%3Cline x1='8' y1='25' x2='24' y2='25' stroke='%23D4AF37' stroke-width='0.8' opacity='0.5'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2312100c'/%3E%3Crect x='1.5' y='1.5' width='29' height='29' fill='none' stroke='%23c69a3f' stroke-width='1'/%3E%3Ctext x='16' y='20.5' font-family='Georgia%2Cserif' font-size='12' font-weight='700' fill='%23c69a3f' text-anchor='middle' letter-spacing='1'%3EMW%3C/text%3E%3Cline x1='8' y1='25' x2='24' y2='25' stroke='%23c69a3f' stroke-width='0.6' opacity='0.5'/%3E%3C/svg%3E">
+  <script src="reports.js" defer></script>
+  <script src="app.js" defer></script>
 </head>
 <body>
 
-<div class="grid-bg" aria-hidden="true"></div>
+<a class="skip-link" href="#reports">Skip to reports</a>
+<div class="read-progress" id="read-progress" aria-hidden="true"></div>
 
-<!-- ── Navigation ──────────────────────────────────────── -->
-<nav class="nav" role="navigation" aria-label="Main navigation">
+<!-- ── Masthead / Navigation ───────────────────────────── -->
+<nav class="nav" aria-label="Primary">
   <div class="nav-brand">
     <div class="nav-logo" aria-hidden="true">
-      <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <text x="12" y="15" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#D4AF37" text-anchor="middle" letter-spacing="1">MW</text>
-        <line x1="1" y1="19.5" x2="23" y2="19.5" stroke="#D4AF37" stroke-width="0.75" opacity="0.5"/>
+      <svg width="22" height="20" viewBox="0 0 24 22" xmlns="http://www.w3.org/2000/svg">
+        <text x="12" y="15" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#c69a3f" text-anchor="middle" letter-spacing="1">MW</text>
+        <line x1="1" y1="19.5" x2="23" y2="19.5" stroke="#c69a3f" stroke-width="0.75" opacity="0.5"/>
       </svg>
     </div>
     <div>
@@ -28,218 +34,208 @@
   </div>
   <div class="nav-links">
     <a href="#reports">Reports</a>
+    <a href="#track-record">Track Record</a>
     <a href="#methodology">Methodology</a>
-    <a href="#reports" class="nav-cta">Latest Report</a>
+    <a href="#reports" class="nav-cta">Latest</a>
   </div>
 </nav>
 
-<!-- ── Hero ─────────────────────────────────────────────── -->
-<header class="hero" role="banner">
-  <div class="hero-eyebrow">Independent Research · Since May 2024</div>
-
-  <p class="hero-desc">
-    Monthly Wallstreet publishes one investment thesis every month. Each report covers the macroeconomic backdrop, sector dynamics, technical picture, and risk framework, then commits to a 12-month price target. We record every outcome. No revisions, no retroactive caveats.
+<!-- ── Masthead banner ─────────────────────────────────── -->
+<header class="masthead">
+  <div class="masthead-eyebrow">Independent Research · Since May 2024</div>
+  <h1 class="masthead-title">One thesis a month, <span>on the record.</span></h1>
+  <p class="masthead-desc">
+    Monthly Wallstreet publishes a single investment thesis on the first of every month. Each report locks in the macro data, sector metrics, and technical picture as they stood on the publication date, commits to a 12-month price target, then records what happened. No revisions, no retroactive caveats.
   </p>
-  <div class="hero-stats" aria-label="Repository statistics">
-    <div>
-      <div class="hero-stat-num" id="stat-reports">0</div>
-      <div class="hero-stat-label">Published Reports</div>
-    </div>
-    <div>
-      <div class="hero-stat-num" id="stat-accuracy">0</div>
-      <div class="hero-stat-label">% On Track or Better</div>
-    </div>
-    <div>
-      <div class="hero-stat-num" id="stat-months">0</div>
-      <div class="hero-stat-label">Months of Coverage</div>
-    </div>
-  </div>
 </header>
 
-<!-- ── Methodology Note ──────────────────────────────────── -->
-<section id="methodology" style="position:relative;z-index:1;padding:60px 40px 0;max-width:1200px;margin:0 auto;">
-  <div style="padding:28px 32px; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-md); display:grid; grid-template-columns:1fr 1fr 1fr; gap:32px;">
-    <div>
-      <div class="section-label">Approach</div>
-      <p style="font-size:13px; color:var(--text-2); line-height:1.7;">Each report locks in the macro data, sector metrics, and technical picture as they stood on the publication date. Fundamental analysis anchors every thesis; technical signals confirm entry timing. No hindsight enters the thesis.</p>
-    </div>
-    <div>
-      <div class="section-label">Accountability</div>
-      <p style="font-size:13px; color:var(--text-2); line-height:1.7;">Every report carries a specific 12-month price target and a retrospective verdict. The outcomes column records what happened. No revisions, no retroactive caveats, no asterisks.</p>
-    </div>
-    <div>
-      <div class="section-label">Scope</div>
-      <p style="font-size:13px; color:var(--text-2); line-height:1.7;">Coverage spans equities, commodities, fixed income, real estate, and digital assets. Selection rule: the asset with the strongest risk-adjusted fundamental case, confirmed by a constructive technical setup.</p>
-    </div>
+<!-- ── Statistics rail ─────────────────────────────────── -->
+<section class="hero-stats" aria-label="Repository statistics">
+  <div>
+    <div class="hero-stat-num" id="stat-reports">0</div>
+    <div class="hero-stat-label">Published Reports</div>
+  </div>
+  <div>
+    <div class="hero-stat-num" id="stat-accuracy">0<span aria-hidden="true">%</span></div>
+    <div class="hero-stat-label">Resolved, On Target or Better</div>
+  </div>
+  <div>
+    <div class="hero-stat-num" id="stat-months">0</div>
+    <div class="hero-stat-label">Months of Coverage</div>
   </div>
 </section>
 
-<!-- ── Filters ───────────────────────────────────────────── -->
-<section class="filters-section" aria-label="Report filters">
-  <div class="filters-row" role="group" aria-label="Filter by asset class">
-    <span class="filter-label">Filter:</span>
-    <div id="filter-btns" style="display:flex; gap:8px; flex-wrap:wrap;"></div>
+<!-- ── Reports ─────────────────────────────────────────── -->
+<main>
+<section class="section" id="reports">
+  <div class="section-head">
+    <div>
+      <div class="section-kicker">The Archive</div>
+      <h2 class="section-title">Every Report, In Order</h2>
+    </div>
+    <p class="section-note">Filter by asset class, or search a ticker, month, or theme.</p>
+  </div>
+
+  <div class="filters-row" role="group" aria-label="Filter reports">
+    <span class="filter-label">Class</span>
+    <div class="filter-btns" id="filter-btns"></div>
     <div class="search-wrapper">
       <svg class="search-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
         <circle cx="7" cy="7" r="5"/>
         <path d="M11 11l3 3"/>
       </svg>
-      <input
-        type="search"
-        class="search-input"
-        id="search-input"
-        placeholder="Search reports…"
-        aria-label="Search reports"
-        autocomplete="off"
-      >
+      <input type="search" class="search-input" id="search-input" placeholder="Search NVDA, gold, March…" aria-label="Search reports" autocomplete="off">
     </div>
+  </div>
+
+  <div class="reports-grid" id="reports-grid" aria-label="Research reports" aria-live="polite"></div>
+</section>
+
+<!-- ── Track Record (computed) ─────────────────────────── -->
+<section class="section track-section" id="track-record">
+  <div class="section-head">
+    <div>
+      <div class="section-kicker">Accountability</div>
+      <h2 class="section-title">The Track Record</h2>
+    </div>
+    <p class="section-note">Entry price and target as published. Verdict as recorded.</p>
+  </div>
+  <p class="track-lede" id="track-lede"></p>
+  <div class="track-table-wrap">
+    <table class="track-table" id="track-table">
+      <thead>
+        <tr>
+          <th scope="col">Month</th>
+          <th scope="col">Report</th>
+          <th scope="col">Ticker</th>
+          <th scope="col" class="num">Entry</th>
+          <th scope="col" class="num">Target</th>
+          <th scope="col">Verdict</th>
+        </tr>
+      </thead>
+      <tbody id="track-body"></tbody>
+    </table>
   </div>
 </section>
 
-<!-- ── Reports Grid ──────────────────────────────────────── -->
-<main class="reports-section" id="reports" aria-label="Investment reports">
-  <div class="reports-grid" id="reports-grid" role="list" aria-label="Research reports"></div>
+<!-- ── Methodology ─────────────────────────────────────── -->
+<section class="section" id="methodology">
+  <div class="section-head">
+    <div>
+      <div class="section-kicker">How This Works</div>
+      <h2 class="section-title">Methodology</h2>
+    </div>
+  </div>
+  <div class="method-grid">
+    <div class="method-col">
+      <div class="method-label">Approach</div>
+      <p>Each report fixes the macro data, sector metrics, and technical picture as they stood on the publication date. Fundamentals anchor the thesis; technical signals confirm the entry. Hindsight stays out of the argument.</p>
+    </div>
+    <div class="method-col">
+      <div class="method-label">Accountability</div>
+      <p>Every report carries a specific 12-month price target and a retrospective verdict. The outcome column records what happened. No revisions, no retroactive caveats, no asterisks.</p>
+    </div>
+    <div class="method-col">
+      <div class="method-label">Scope</div>
+      <p>Coverage runs across equities, commodities, fixed income, real estate, and digital assets. Selection rule: the asset with the strongest risk-adjusted fundamental case, confirmed by a constructive technical setup.</p>
+    </div>
+  </div>
+</section>
 </main>
 
-<!-- ── Scoreboard ────────────────────────────────────────── -->
-<section class="scoreboard-section" aria-label="Performance scoreboard">
-  <div class="scoreboard-inner">
-    <div class="section-header">
-      <div class="section-eyebrow">Track Record</div>
-      <h2 class="section-title">Report Outcomes</h2>
-    </div>
-    <div class="score-grid">
-      <div class="score-card score-exceeded">
-        <div class="score-num" id="score-exceeded">–</div>
-        <div class="score-label">Correct or Better</div>
-      </div>
-      <div class="score-card score-on-track">
-        <div class="score-num" id="score-track">–</div>
-        <div class="score-label">On Track</div>
-      </div>
-      <div class="score-card score-partial">
-        <div class="score-num" id="score-partial">–</div>
-        <div class="score-label">Partial</div>
-      </div>
-      <div class="score-card score-mixed">
-        <div class="score-num" id="score-mixed">–</div>
-        <div class="score-label">Mixed</div>
-      </div>
-      <div class="score-card score-progress">
-        <div class="score-num" id="score-progress">–</div>
-        <div class="score-label">Unresolved</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── Footer ────────────────────────────────────────────── -->
-<footer role="contentinfo">
+<!-- ── Footer ──────────────────────────────────────────── -->
+<footer>
   <div class="footer-inner">
     <div>
       <div class="footer-brand-name">Monthly <span>Wallstreet</span></div>
       <p class="footer-disclaimer">
-        This repository is an independent research project. Nothing published here constitutes financial advice, a solicitation, or an offer to buy or sell any security. All price targets are retrospective analytical exercises. Past analytical accuracy does not predict future performance. Invest based on your own research and risk tolerance.
+        This repository is an independent research project. Nothing published here is financial advice, a solicitation, or an offer to buy or sell any security. All price targets are retrospective analytical exercises. Past analytical accuracy does not predict future results. Invest on your own research and risk tolerance.
       </p>
     </div>
     <div class="footer-right">
-      <div style="color:var(--gold); font-family:var(--font-mono); font-size:13px; margin-bottom:8px;">α MONTHLY WALLSTREET</div>
-      <div>Research Period: May 2024 – Present</div>
-      <div style="margin-top:4px;">Published monthly on the 1st</div>
+      <div class="footer-mark">MONTHLY WALLSTREET</div>
+      <div>Research period: May 2024 to present</div>
+      <div>Published monthly, on the 1st</div>
     </div>
   </div>
 </footer>
 
-<!-- ── Report Modal ───────────────────────────────────────── -->
-<div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-label="Report detail">
-  <div class="modal" id="modal">
+<!-- ── Report Modal ────────────────────────────────────── -->
+<div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+  <article class="modal" id="modal">
 
     <header class="modal-header">
       <div class="modal-eyebrow">
-        <span class="card-month" id="modal-month-badge"></span>
+        <span id="modal-month-badge"></span>
         <span class="card-asset-class" id="modal-class-badge"></span>
       </div>
       <h2 class="modal-title" id="modal-title"></h2>
       <p class="modal-subtitle" id="modal-subtitle"></p>
-      <button class="modal-close" id="modal-close-btn" aria-label="Close report">×</button>
+      <button class="modal-close" id="modal-close-btn" aria-label="Close report" type="button">&times;</button>
     </header>
 
-    <div class="report-meta" id="modal-meta" role="list" aria-label="Report metadata"></div>
+    <nav class="modal-toc" id="modal-toc" aria-label="Report sections"></nav>
 
-    <div class="modal-body">
+    <div class="report-meta" id="modal-meta"></div>
 
-      <!-- Macro Context -->
-      <div>
+    <div class="modal-body" id="modal-body">
+
+      <section class="report-section" id="sec-macro">
         <div class="section-label">Macro Context at Writing</div>
-        <div class="macro-block">
-          <p class="macro-text" id="modal-macro"></p>
-        </div>
-      </div>
+        <p class="macro-text" id="modal-macro"></p>
+      </section>
 
-      <!-- Thesis -->
-      <div>
+      <section class="report-section" id="sec-thesis">
         <div class="section-label">Core Thesis</div>
-        <div class="thesis-block">
-          <p class="thesis-text" id="modal-thesis"></p>
-        </div>
-      </div>
+        <div class="thesis-block"><p class="thesis-text" id="modal-thesis"></p></div>
+      </section>
 
-      <!-- Body -->
-      <div>
+      <section class="report-section" id="sec-analysis">
         <div class="section-label">Full Analysis</div>
         <div class="report-content" id="modal-body-content"></div>
-      </div>
+      </section>
 
-      <!-- Key Metrics -->
-      <div>
+      <section class="report-section" id="sec-metrics">
         <div class="section-label">Key Metrics at Writing</div>
         <div class="metrics-grid" id="modal-metrics"></div>
-      </div>
+      </section>
 
-      <!-- Technical Picture -->
-      <div>
+      <section class="report-section" id="sec-technical">
         <div class="section-label">Technical Picture</div>
         <div class="technical-grid" id="modal-technical"></div>
-      </div>
+      </section>
 
-      <!-- Quarterly Performance -->
-      <div>
+      <section class="report-section" id="sec-quarterly">
         <div class="section-label">Last 4 Quarters</div>
         <div id="modal-quarterly"></div>
-      </div>
+      </section>
 
-      <!-- Wall Street Watching -->
-      <div>
+      <section class="report-section" id="sec-wsw">
         <div class="section-label">What Wall Street Is Watching</div>
         <div class="wsw-grid" id="modal-wsw"></div>
-      </div>
+      </section>
 
-      <!-- Segment Revenue -->
-      <div>
+      <section class="report-section" id="sec-segments">
         <div class="section-label">Segment Breakdown</div>
         <div class="segments-grid" id="modal-segments"></div>
-      </div>
+      </section>
 
-      <!-- Recommended Play -->
-      <div>
+      <section class="report-section" id="sec-play">
         <div class="section-label">Recommended Play</div>
         <div class="play-block" id="modal-play"></div>
-      </div>
+      </section>
 
-      <!-- Retrospective -->
-      <div>
+      <section class="report-section" id="sec-retro">
         <div class="section-label">Retrospective Verdict</div>
         <div class="retro-block" id="modal-retro">
           <div class="retro-verdict" id="modal-retro-verdict"></div>
           <p class="retro-note" id="modal-retro-note"></p>
         </div>
-      </div>
+      </section>
 
     </div><!-- /modal-body -->
-  </div><!-- /modal -->
+  </article><!-- /modal -->
 </div><!-- /modal-overlay -->
 
-<script src="reports.js"></script>
-<script src="app.js"></script>
 </body>
 </html>
