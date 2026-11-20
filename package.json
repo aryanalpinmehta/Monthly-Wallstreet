@@ -1,0 +1,20 @@
+{
+  "name": "monthly-wallstreet",
+  "version": "1.0.0",
+  "description": "Monthly Wallstreet. Independent investment research. Monthly deep dives into equities, commodities, real estate, and digital assets.",
+  "main": "app.js",
+  "scripts": {
+    "dev": "npx serve .",
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "investment",
+    "research",
+    "analytics"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
