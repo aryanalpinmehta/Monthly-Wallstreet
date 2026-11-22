@@ -39,7 +39,7 @@ const REPORT_SECTIONS = [
    Copy only, no fabricated data, price target, or recommendation. */
 const NEXT_ISSUE = {
   label: 'Next Issue',
-  title: 'The August 2026 report is in research.',
+  title: 'The January 2027 report is in research.',
   note: 'New theses publish on the first of the month. This slot fills when the issue ships.',
 };
 
@@ -80,7 +80,7 @@ function renderCard(r) {
 
   card.innerHTML = `
     <div class="card-header">
-      <span class="card-month">${r.month}</span>
+      <span class="card-month">${r.month}${r.draft ? ' <span class="draft-tag">Draft</span>' : ''}</span>
       <span class="card-rating" aria-label="Conviction ${r.ratingScore} of 5">${ratingDots(r.ratingScore)}</span>
     </div>
     <span class="card-asset-class ${acClass}">${r.assetClass}</span>
@@ -230,7 +230,7 @@ function openModal(r) {
   const acClass  = CLASS_MAP[r.assetClass] || 'ac-equity';
   const outLabel = OUTCOME_LABELS[r.outcome] || r.outcome;
 
-  document.getElementById('modal-month-badge').textContent = r.month;
+  document.getElementById('modal-month-badge').textContent = r.month + (r.draft ? ' · DRAFT: figures unverified' : '');
   const classBadge = document.getElementById('modal-class-badge');
   classBadge.className = `card-asset-class ${acClass}`;
   classBadge.textContent = r.assetClass;

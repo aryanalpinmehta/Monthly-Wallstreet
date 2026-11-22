@@ -1106,3 +1106,5 @@ td.miss { color:var(--neg); }
   .report-card, .reports-grid { break-inside:avoid; }
   a { text-decoration:none; color:#111; }
 }
+
+.draft-tag{display:inline-block;margin-left:.5em;padding:1px 6px;border:1px solid currentColor;border-radius:3px;font-size:.65em;letter-spacing:.08em;text-transform:uppercase;opacity:.75;vertical-align:middle}

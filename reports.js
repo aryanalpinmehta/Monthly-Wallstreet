@@ -1,6 +1,6 @@
 /* ============================================================
-   Conviction Monthly reports.js
-   25 reports: May 2024 – May 2026
+   Monthly Wallstreet reports.js
+   32 reports: May 2024 – December 2026
    ============================================================ */
 
 const REPORTS = [
@@ -3614,5 +3614,303 @@ const REPORTS = [
       keyRisk: "A resurgence of regulatory action from the EU Digital Markets Act forcing interoperability between WhatsApp and competing messaging platforms could degrade WhatsApp Business API revenue by reducing the exclusivity of the Meta messaging network. A reversal of the flat capex guidance, signalling further large-scale infrastructure investment, would compress the operating leverage narrative and likely reprice the stock below the 200-day MA.",
       catalysts: ["Q2 2026 earnings (July 2026): Advantage+ penetration crossing 60% and WhatsApp Business ARR update", "Ray-Ban Meta unit sales disclosure showing 2M+ quarterly run rate", "Threads advertising inventory launch with disclosed CPM data above Facebook Feed benchmarks", "FY2026 buyback execution: $50B programme authorised in Q4 2025 at an average price below $640"]
     }
+  },
+  {
+    id: "2026-07",
+    month: "July 2026",
+    date: "2026-07-01",
+    title: "Broadcom's Custom AI Silicon and the Networking Layer Under It",
+    subtitle: "Custom accelerators, Ethernet switching and VMware software give Broadcom three revenue streams tied to AI buildouts. Customer concentration is the cost of owning it.",
+    asset: "Broadcom",
+    ticker: "AVGO",
+    assetClass: "Equity",
+    sector: "Semiconductors",
+    exchange: "NASDAQ",
+    priceAtTime: "AVGO ~$374 (unverified)",
+    targetPrice: "$430 – $465 (15% to 25% above entry)",
+    timeHorizon: "12 months",
+    rating: "Buy",
+    ratingScore: 4,
+    agents: [],
+    tags: ["Semiconductors", "AI Infrastructure", "Networking", "Technology"],
+    outcome: "in-progress",
+    outcomeNote: "Published July 1, 2026. 12-month verdict due July 2027.",
+    macroContext: "The federal funds target range is 3.50% to 3.75% under Fed chair Kevin Warsh, and markets price roughly 29% odds of a rate hike at the July meeting. The 10-year Treasury yield is about 4.48%. The S&P 500 sits just under 7,500 and the Dow hit a record on July 1. Chipmakers rallied into the month while the wider AI and technology group traded mixed. A rate path that might tighten rather than ease is a headwind for high-multiple stocks, so entry price and position size matter more than usual.",
+    thesis: "Broadcom sells the parts that large cloud companies need to build AI clusters at scale: custom accelerator chips designed to a customer's specification, the Ethernet switching that links thousands of those chips, and the VMware software that runs enterprise workloads. The first two grow with AI capital spending. The third adds recurring revenue that does not depend on the chip cycle. The market tends to value Broadcom as one more AI chip name. The better frame is a diversified infrastructure supplier with a software base underneath it. The main risk is that a handful of customers drive the custom chip business.",
+    body: `<h3>Custom Accelerators: Building to a Customer's Design</h3>
+<p>Broadcom does not sell a general-purpose AI chip. It works with a small number of very large cloud and internet companies to design accelerators built for their own models and software, then manufactures them through a foundry partner. The customer gets a chip tuned to its workload and a lower cost per unit of compute than a merchant GPU in many cases. Broadcom gets a multi-year design relationship that is hard for the customer to switch away from once software and data centres are built around the chip.</p>
+<p>This is a different business from selling off-the-shelf processors. Revenue is lumpy because it follows customer programme timing, but each design win tends to run for several chip generations. The question for the next twelve months is whether existing customers keep expanding deployments and whether new customers move from evaluation to volume.</p>
+<h3>Networking: The Part of the Cluster Nobody Discounts</h3>
+<p>An AI cluster is only as fast as the network connecting its chips. Broadcom's Ethernet switch and routing silicon moves data between accelerators, and it competes with proprietary interconnects by being open, standards-based and cheaper to scale. As clusters grow from thousands to hundreds of thousands of chips, network spending grows faster than the chip count, because every added chip needs more links and more switching tiers.</p>
+<p>Networking also diversifies the AI exposure. A customer that buys a competitor's accelerator still often runs Broadcom switches. That makes this segment less dependent on any single chip design win than the custom accelerator business.</p>
+<h3>VMware: Recurring Software Under a Cyclical Chip Business</h3>
+<p>Broadcom's VMware acquisition moved the company well beyond semiconductors. VMware sells virtualisation and private cloud software to large enterprises under subscription contracts. Revenue is recurring, margins are high, and the cost base was cut after the deal closed. This segment smooths the swings that come with chip programme timing.</p>
+<p>The risk sits with the customers. Some enterprises objected to the shift to subscription pricing and bundled products, and regulators and customer groups have scrutinised the changes. If renewals weaken, the software cushion thins. If renewals hold, VMware gives the company cash flow to fund buybacks and further acquisitions regardless of where AI spending goes.</p>
+<h3>Valuation, Concentration and What Could Go Wrong</h3>
+<p>This report does not rely on a verified earnings estimate, so it does not claim a specific forward multiple. The case rests on mix and durability: three revenue streams, two of them tied to AI infrastructure and one that is not. The price at publication is about $374, which is unverified and should be checked against a live quote before acting.</p>
+<p>Customer concentration is the central risk. A small number of buyers account for a large share of custom accelerator demand. If one of them slows spending, brings design in-house, or moves volume to another supplier, the effect on Broadcom's growth would be immediate. A second risk is the macro backdrop: with the market pricing some chance of a rate hike and the 10-year near 4.48%, a stock that has already rallied can fall sharply on a change in rate expectations alone. The stop-loss below is set to limit that outcome.</p>`,
+    keyMetrics: [
+      { label: "Price at Publication", value: "~$374 (unverified)" },
+      { label: "Fed Funds Target Range", value: "3.50% – 3.75%" },
+      { label: "10-Year Treasury Yield", value: "~4.48%" },
+      { label: "Revenue Streams", value: "Custom AI chips, networking, VMware software" }
+    ],
+    recommendedPlay: {
+      action: "Buy common shares, building the position in tranches",
+      entry: "$365 – $380 (within about 2% either side of the ~$374 reference price)",
+      target: "$430 – $465 (15% to 25% above the ~$374 reference price)",
+      stopLoss: "$318 (15% below the ~$374 reference price)",
+      timeframe: "12 months",
+      positionSize: "2–4% of portfolio, below a typical large-cap position because of customer concentration and rate sensitivity",
+      justification: "Broadcom combines AI infrastructure growth with a recurring software base, which gives it more ways to hold up than a pure chip supplier. Buying in tranches limits the cost of a poor entry given the unverified starting price and a rate backdrop that could move against growth stocks. The target range is a 15% to 25% gain on the reference price, a judgement about what the AI buildout and software cash flow can support over a year, not the output of an earnings model.",
+      keyRisk: "A large custom-chip customer cuts spending, shifts volume to another supplier or designs in-house, hitting the segment where concentration is highest. A rate hike or a higher 10-year yield could compress the multiple even if the business performs.",
+      catalysts: ["Quarterly earnings update on custom accelerator demand and the timing of new customer programmes", "Evidence of additional cloud customers moving custom designs into volume production", "VMware renewal trends and any regulatory outcome on its pricing and bundling", "Fed policy decisions and the direction of the 10-year Treasury yield"]
+    },
+    draft: true
+  },
+  {
+    id: "2026-08",
+    month: "August 2026",
+    date: "2026-08-01",
+    title: "Visa: A Toll on Spending in a Hawkish Tape",
+    subtitle: "The network earns on transaction volume, not on credit risk. A Fed leaning toward a hike tests consumer spending, but not the toll model itself.",
+    asset: "Visa",
+    ticker: "V",
+    assetClass: "Equity",
+    sector: "Payments",
+    exchange: "NYSE",
+    priceAtTime: "Pending verification",
+    targetPrice: "15-20% above entry (to be set once the Aug 1 close is verified)",
+    timeHorizon: "12 months",
+    rating: "Buy",
+    ratingScore: 4,
+    agents: [],
+    tags: ["Payments", "Cross-Border", "Network Effects", "Financials"],
+    outcome: "in-progress",
+    outcomeNote: "Published August 1, 2026. 12-month verdict due August 2027.",
+    macroContext: "The Federal Reserve held the federal funds target range at 3.50-3.75% at its July 29, 2026 meeting, with three dissents favouring a hike. Kevin Warsh chairs the committee. The S&P 500 closed at 7,321.63 on July 29. AI and semiconductor stocks weighed on the indexes while defensive sectors and the Dow held up, and oil prices were elevated. The market is pricing a rate path that could tilt upward rather than downward, which raises the question of what a tighter regime does to consumer spending and to the companies that earn a fee on it.",
+    thesis: "Visa runs a payments network, not a lending book. It earns a small fee each time a card is used, so its revenue follows the nominal value of spending and the volume of cross-border travel and e-commerce. It does not carry consumer credit losses. In a market where AI-linked stocks are under pressure and rate-hike risk is rising, that profile is more defensive than the headline label of a growth payments stock suggests. The thesis is that network effects keep volume compounding while the main threats, regulation and stablecoin rails, play out slowly. This report carries no verified price, so entry, target and stop are written as rules to be applied once the August 1 close is confirmed.",
+    body: `<h3>Why the Network Model Holds Up When Rates Rise</h3>
+<p>Visa connects card-issuing banks, merchants and acquirers. It does not lend to the cardholder, so a rise in delinquencies hits the issuing bank, not Visa. What Visa earns depends on how much people spend and how often they pay by card. Inflation lifts nominal volume, and the steady shift from cash to cards adds to it. A hawkish Fed is a risk to real consumer spending, particularly for lower-income households with variable-rate debt. It is a smaller risk to a fee on every transaction than to a lender, and that difference is the starting point for this call.</p>
+<p>The honest limit is that a real slowdown in spending would still slow Visa's growth. The argument is relative resilience, not immunity. If the three dissents at the July meeting turn into an actual hike and consumers pull back sharply, volume growth would slow and the stock would likely fall with the wider market.</p>
+<h3>Network Effects and Cross-Border Volume</h3>
+<p>A card network is worth more to each merchant and issuer as more of the other side joins. Visa's acceptance footprint and issuer relationships took decades to build, and a new network has to win both sides at once. That structure is why the incumbent position has proved durable. Cross-border transactions are the most valuable part of it. They typically carry higher fees than domestic ones because they involve currency conversion and two banking systems. Travel and international e-commerce therefore matter more to Visa's earnings than their share of total volume suggests.</p>
+<p>Elevated oil prices cut both ways here. Higher fuel costs can raise airfares and weigh on discretionary travel, but they also raise nominal spend on fuel and travel purchases made by card. The net effect on cross-border volume is something to check in the next set of reported figures, not something to assume.</p>
+<h3>Regulatory and Interchange Risk</h3>
+<p>The largest standing risk is regulation. Interchange fees, the share of each purchase that goes to the issuing bank, face scrutiny in the United States and abroad, and merchants have litigated and lobbied for lower caps for years. Visa does not keep interchange itself, but rules that reduce card economics can push issuers and merchants toward alternatives and can limit what Visa charges for network services. Antitrust attention to debit routing adds a second front. This risk does not resolve in a quarter. It is a recurring source of headline drops, and it caps the multiple investors are willing to pay.</p>
+<h3>Stablecoins and Account-to-Account Payments</h3>
+<p>The competitive threat to watch is payments that skip the card network, such as stablecoin settlement and bank-to-bank transfers. The risk is most credible in cross-border payments, where fees are high and speed is poor. Visa has responded by adding stablecoin settlement and acting as a distributor of the new rails, which is the correct response, but it is not yet clear how much fee revenue a stablecoin transaction produces compared with a card one. We rate this a slow-moving risk. It matters for the five-to-ten year view more than for the 12-month window, but a faster-than-expected shift would be the clearest sign that the thesis is wrong.</p>`,
+    keyMetrics: [
+      { label: "Fed Funds Target Range", value: "3.50-3.75% (held Jul 29, 2026; three dissents favoured a hike)" },
+      { label: "S&P 500 Close", value: "7,321.63 (Jul 29, 2026)" }
+    ],
+    recommendedPlay: {
+      action: "Buy common shares of Visa, sized as a core holding rather than a trade",
+      entry: "Within 3% of the Aug 1, 2026 close (price to be verified before use)",
+      target: "15-20% above entry",
+      stopLoss: "10% below entry",
+      timeframe: "12 months",
+      positionSize: "3-4% of portfolio",
+      justification: "Visa earns a fee on spending without carrying credit risk, which makes it a steadier holding than lenders if a hawkish Fed slows the consumer. Its network position is hard to replicate, and cross-border volume gives it a higher-quality fee stream. The case does not depend on a rate cut. It depends on nominal spending continuing to grow and on regulation staying a drag on the multiple rather than a break in the model. The price rules are deliberately relative because no verified price was available at the time of writing.",
+      keyRisk: "A regulatory or legal outcome that cuts interchange or forces new routing rules, or a faster shift of cross-border payments onto stablecoin rails, would lower both fee growth and the multiple. A sharp consumer pullback after a rate hike would slow volume growth.",
+      catalysts: ["Next quarterly earnings: payments volume and cross-border volume growth versus the prior quarter", "The next Fed meeting: whether the hike dissents grow or fade", "Interchange and debit routing rulings or legislation in the United States", "Disclosure of stablecoin settlement volume and the fees attached to it"]
+    },
+    draft: true
+  },
+  {
+    id: "2026-09",
+    month: "September 2026",
+    date: "2026-09-01",
+    title: "Gold Sold on Hike Fears: The Case Against Treating It as a Rate Trade",
+    subtitle: "Gold fell more than 2% to a two-week low as yields rose and the dollar firmed. The market is pricing a rate-hike regime. The reasons to own gold sit elsewhere.",
+    asset: "Gold",
+    ticker: "GLD",
+    assetClass: "Commodity",
+    sector: "Precious Metals",
+    exchange: "NYSE Arca",
+    priceAtTime: "Gold ~$4,320/oz (futures settle, unverified)",
+    targetPrice: "$4,800 – $5,000/oz",
+    timeHorizon: "12 months",
+    rating: "Buy",
+    ratingScore: 4,
+    agents: [],
+    tags: ["Gold", "Commodities", "Precious Metals", "Macro", "Rates"],
+    outcome: "in-progress",
+    outcomeNote: "Published September 1, 2026. 12-month verdict due September 2027.",
+    macroContext: "The federal funds rate sits at 3.50-3.75%, and the Federal Reserve now includes dissents in favour of hikes. Kevin Warsh chairs the Fed. Bonds sold off into September and Treasury yields rose sharply. On September 1 gold dropped more than 2% to a two-week low as higher yields, a firmer dollar and rate-hike bets combined. Reported prices vary by source: the August contract settled at $4,385.70 on August 31, the September contract settled at $4,321.7 on September 1, and one spot reading came in at $4,302.68. Figures here come from unverified web sources and should be checked against a live quote before any trade.",
+    thesis: "The market is treating gold as a pure rate-sensitive asset: yields up, dollar up, hike odds up, gold down. That framing explains one day of price action. It does not explain why gold sits above $4,000/oz in the first place. The reasons to hold it are central bank demand, geopolitical and oil-price shocks, and fiscal risk. None of these disappears because the Fed leans hawkish, and a hike cycle that pushes bond yields higher adds to the fiscal concern. The hike regime is the main risk to this call, and the position is sized and stopped with that in mind.",
+    body: `<h3>What Happened on September 1</h3>
+<p>Gold fell more than 2% on September 1 to a two-week low. The drivers were all on the rates side: Treasury yields rose, the dollar firmed, and traders added to bets that the Fed's next move is a hike rather than a cut. The September contract settled near $4,321.7/oz, down from $4,385.70 on the August contract the day before. Spot readings in the $4,300-$4,375 range appeared across sources, so the exact level depends on which quote you use. This report uses $4,320 as the reference price.</p>
+<p>The move fits a familiar pattern. A non-yielding asset competes with bonds, and when bond yields rise, the opportunity cost of holding gold rises with them. Algorithmic and macro funds trade that relationship mechanically. A single-day drop of this size says more about positioning and short-term flows than about the long-run case for the metal.</p>
+<h3>The Rate Case Against Gold</h3>
+<p>The bear case deserves a fair statement. Policy rates are 3.50-3.75%, hike dissents are now visible on the committee, and the bond market has sold off hard. If the Fed under Warsh moves toward tightening, real yields can climb further and the dollar can strengthen. Both are historically bad for gold. A sustained hike cycle would likely push gold below the reference price and could test the stop level set below. This is the main risk to the position, and it is a live one, not a tail event.</p>
+<p>The counter-point is that gold has already absorbed part of this. The metal trades above $4,300/oz with the funds rate at 3.50-3.75% and yields rising. A price that holds those levels in a rising-yield environment tells you that buyers other than rate traders are setting part of the price.</p>
+<h3>The Contrarian Case: Demand That Does Not Track Yields</h3>
+<p>Three drivers sit outside the rate framework. First, central banks buy gold as a reserve asset for reasons of sanctions risk, currency diversification and distrust of any single sovereign balance sheet. That buying is policy-driven and tends to be price-insensitive compared with speculative demand. This report does not cite tonnage figures because none were verified. Second, geopolitical and oil-price shocks raise demand for assets that carry no counterparty risk, and they also feed inflation, which complicates the Fed's hike case. Third, fiscal risk: large deficits mean heavy Treasury issuance, and a bond market that is selling off is already signalling that investors want more compensation to fund governments. Gold benefits when confidence in sovereign debt weakens, even if the first-order effect of higher yields is negative.</p>
+<p>These drivers work on a slower clock than the rate trade. Over 12 months they can outweigh a repricing of hike odds. Over 12 days they often cannot.</p>
+<h3>Positioning and Implementation</h3>
+<p>GLD is the vehicle. It tracks the gold price less fees, so entry, target and stop below are expressed in gold $/oz and should be mapped to the GLD quote at the time of trade. The September 1 drop gives a better entry than the August 31 settle, but the move is not over until yields stabilise. The plan is to accumulate in a band around the reference price rather than buy in one clip, keep size moderate, and cut the position if gold closes below the stop. A hawkish Fed surprise would be a reason to review the thesis, not only the stop. A rise in yields driven by fiscal concern, rather than by a stronger growth outlook, is the version that should be tolerated.</p>`,
+    keyMetrics: [
+      { label: "Gold Reference Price", value: "~$4,320/oz (Sep 1 2026 futures settle, unverified)" },
+      { label: "Fed Funds Rate", value: "3.50-3.75%, with hike dissents" },
+      { label: "Sep 1 Move", value: "Down more than 2% to a two-week low" }
+    ],
+    recommendedPlay: {
+      action: "Buy GLD in tranches on the pullback, with gold-price levels as the reference",
+      entry: "$4,250 – $4,350/oz gold (about 1.6% below to 0.7% above $4,320); split into two tranches",
+      target: "$4,970/oz gold (about +15% from $4,320)",
+      stopLoss: "$3,975/oz gold (about 8% below $4,320); a daily close below this level invalidates the entry",
+      timeframe: "12 months",
+      positionSize: "2-4% of portfolio, held smaller than a typical equity position because the rate regime can push against the trade",
+      justification: "The sell-off on September 1 was driven by rates and dollar moves, not by a change in the reasons to own gold. Central bank reserve demand, geopolitical and oil-shock risk, and fiscal strain all stay in place. Entering after a 2%+ drop gives a lower price than the August 31 settle. The stop is set 8% below the reference to allow for hike-driven volatility without holding through a regime change.",
+      keyRisk: "A sustained Fed hike cycle under Chair Warsh. Hike dissents already exist, yields are rising and the dollar is firming. If real yields keep climbing, gold can fall through the stop regardless of the long-run demand case.",
+      catalysts: ["Next FOMC decision and the dissent count, which tests how serious the hike risk is", "Treasury yield direction after the September bond sell-off, and whether the move is driven by fiscal concern or growth", "Geopolitical or oil-price shocks that raise safe-haven demand", "Any disclosed central bank reserve purchases (not verified for this report)"]
+    },
+    draft: true
+  },
+  {
+    id: "2026-10",
+    month: "October 2026",
+    date: "2026-10-01",
+    title: "Exxon Mobil as an Oil-Shock and Inflation Hedge",
+    subtitle: "Oil risk is elevated, yields are rising and equities are rate-sensitive. XOM pairs a large balance sheet with energy exposure that pays when the macro backdrop turns hostile.",
+    asset: "Exxon Mobil",
+    ticker: "XOM",
+    assetClass: "Equity",
+    sector: "Energy",
+    exchange: "NYSE",
+    priceAtTime: "XOM ~$164 (unverified)",
+    targetPrice: "$187 – $190 (+14% to +16%)",
+    timeHorizon: "12 months",
+    rating: "Buy",
+    ratingScore: 4,
+    agents: [],
+    tags: ["Energy", "Oil", "Inflation Hedge", "Large Cap"],
+    outcome: "in-progress",
+    outcomeNote: "Published October 1, 2026. 12-month verdict due October 2027.",
+    macroContext: "The Fed funds rate sits at 3.50% to 3.75% under Chair Kevin Warsh, and some committee members have dissented in favour of a hike. Long-dated Treasury yields have been rising, which pressures long-duration assets such as growth equities. Geopolitical risk around oil supply, including the Strait of Hormuz, is elevated. That combination favours assets whose earnings rise with commodity prices and whose valuations do not depend on distant cash flows.",
+    thesis: "Exxon Mobil gives a portfolio direct exposure to the one macro risk that most other holdings cannot absorb: an oil supply shock. If crude spikes, inflation expectations and yields tend to rise together, and growth stocks suffer. Exxon's earnings move the other way. The company also carries an investment-grade balance sheet and a long record of returning cash through dividends and buybacks, so it does not need higher oil prices to remain solvent or to keep paying shareholders. The case is a hedge with a return attached, not a bet on a single price forecast.",
+    body: `<h3>Why Energy Works as a Hedge Right Now</h3>
+<p>Most equity portfolios carry the same hidden exposure: they lose when oil rises sharply. Higher oil lifts inflation, inflation keeps the Fed from cutting and can push yields higher, and higher yields lower the present value of growth earnings. Energy producers sit on the other side of that chain. When crude is under pressure from supply risk, their revenue rises while the rest of the market reprices lower. Holding one large energy name offsets part of that risk at a modest cost in tracking error.</p>
+<p>The current setup shows the pressure points clearly. Policy rates remain above 3.5%, the Fed is split enough that a hike has drawn dissent, and yields have been climbing. Supply risk around the Strait of Hormuz is a live concern. None of these needs to resolve badly for the hedge to be useful; they only need to remain unresolved.</p>
+<h3>Balance Sheet and Capital Returns</h3>
+<p>Exxon is one of the largest and best-capitalised energy companies in the world. Its scale lets it fund projects, dividends and share repurchases through a normal commodity cycle without relying on capital markets at a bad moment. That matters for a hedge position. A smaller producer might benefit more from a price spike but carries more risk if oil falls instead. Exxon's financial strength limits the downside in the scenario where the hedge is not needed and oil softens.</p>
+<p>This report does not quote production, earnings, dividend or buyback figures, because the data for this issue could not be verified at publication. The argument rests on the structure of the business, not on a forecast of any one quarter's numbers. Readers should confirm current figures from Exxon's latest filings before sizing a position.</p>
+<h3>What Could Go Wrong</h3>
+<p>The hedge fails if oil falls. A resolution of supply concerns, weaker demand from a slowing economy, or faster supply growth would remove the support for energy equities, and XOM would likely lag a market that rallies on lower yields. Energy stocks are also crowded when oil dominates the headlines, which means a sharp reversal in crude can hit the shares quickly. The position is sized small for that reason, and the stop-loss below is set to cap the loss if the macro picture shifts.</p>
+<h3>How to Use the Position</h3>
+<p>Treat XOM as insurance with a positive expected carry, not as a core growth holding. It earns its place when oil, yields and inflation expectations rise together, and it costs little when they do not. The entry range is taken from the roughly $164 price level (unverified, from a single source) and the target and stop are set as fixed percentages from it, so they should be rechecked against the live quote before any order is placed.</p>`,
+    keyMetrics: [
+      { label: "Reference Price", value: "~$164 (unverified; $162.75 prior close, also unverified)" },
+      { label: "Fed Funds Rate", value: "3.50% – 3.75%" },
+      { label: "Planned Reward / Risk", value: "+15% target vs -12% stop" }
+    ],
+    recommendedPlay: {
+      action: "Buy common shares of XOM as a hedge against an oil-driven inflation and yield shock",
+      entry: "$160 – $166 (about -2.5% to +1.5% around $164)",
+      target: "$189 (+15% from $164)",
+      stopLoss: "$144 (-12% from $164; a close below this level invalidates the hedge case)",
+      timeframe: "12 months",
+      positionSize: "2–4% of portfolio",
+      justification: "The position offsets the portfolio's shared exposure to an oil spike. Rising yields and elevated supply risk raise the odds that energy outperforms the broader market, while Exxon's balance sheet and record of returning cash limit the damage if oil softens. Shares are preferred to options because the goal is steady hedge exposure over twelve months, not a short-dated oil call.",
+      keyRisk: "A fall in oil prices, from easing supply fears or weaker demand, would remove the support for energy equities, and XOM could underperform a market that rallies as yields drop.",
+      catalysts: ["Any escalation or de-escalation of supply risk around the Strait of Hormuz", "Fed policy decisions and further dissents on the rate path under Chair Warsh", "Exxon's next quarterly earnings and capital return update", "Direction of long-dated Treasury yields"]
+    },
+    draft: true
+  },
+  {
+    id: "2026-11",
+    month: "November 2026",
+    date: "2026-11-01",
+    title: "Procter & Gamble: A Defensive Hedge Against an AI Drawdown and a Rate-Hike Regime",
+    subtitle: "October rotated money into staples as tech sold off and yields spiked. P&G offers pricing power and low cyclicality, but crowding and oil-linked costs cap how much to pay for it.",
+    asset: "Procter & Gamble",
+    ticker: "PG",
+    assetClass: "Equity",
+    sector: "Consumer Staples",
+    exchange: "NYSE",
+    priceAtTime: "Pending verification",
+    targetPrice: "15% – 20% above entry",
+    timeHorizon: "12 months",
+    rating: "Buy",
+    ratingScore: 4,
+    agents: [],
+    tags: ["Consumer Staples", "Defensive", "Pricing Power", "Rate Hikes"],
+    outcome: "in-progress",
+    outcomeNote: "Published November 1, 2026. 12-month verdict due November 2027.",
+    macroContext: "October 2026 was a defensive month. Technology and communication services fell, with the Nasdaq down about 5%, while defensive sectors led and energy rose roughly 14%. Oil spiked on attacks tied to the Strait of Hormuz. The 10-year Treasury yield peaked near 5.3% and ended October at about 4.93%. The federal funds rate sits at 3.50-3.75%, and the latest FOMC meeting carried dissents in favour of a hike. Kevin Warsh chairs the Fed. These figures come from unverified web searches and should be checked before use. The setup is a market that fears two things at once: an AI-led equity drawdown and a central bank that may tighten again.",
+    thesis: "Procter & Gamble sells household and personal-care products that consumers rebuy regardless of the economic cycle. That makes it a hedge for two risks the market is pricing now: an unwinding of AI-driven equity leadership, and a rate-hike regime that punishes long-duration growth stocks. The case rests on pricing power and demand stability, not on any earnings surprise. The risks are equally concrete. P&G's input costs are linked to oil through resins, packaging and freight, and defensive stocks are crowded after October. We recommend owning PG as a portfolio hedge at a disciplined entry, not as a momentum trade.",
+    body: `<h3>Why Staples Work in This Regime</h3>
+<p>Two shocks hit in October. Tech and communication services sold off hard, which tested portfolios built around AI leadership. At the same time, a 10-year yield near 5.3% and hike dissents at the Fed showed that rates are not guaranteed to fall. Growth stocks lose value when discount rates rise, because more of their earnings sit far in the future. A company selling detergent, diapers and razors has the opposite profile. Its cash flows arrive now, its volumes barely move with the economy, and it has little exposure to the AI capital cycle. PG is not immune to a market selloff, but it has historically fallen less than the index in drawdowns driven by growth fears. That relative behaviour is what the hedge is for.</p>
+<h3>Pricing Power Is the Core Asset</h3>
+<p>P&G owns category-leading brands where shoppers pay a premium for reliability: Tide, Pampers, Gillette, Oral-B, Always. When input costs rise, P&G can raise shelf prices, shrink pack sizes, or shift mix toward premium tiers, and consumers have mostly continued to buy. That ability to pass on costs is the main defence against an inflationary shock such as an oil spike. It is also what separates P&G from private-label competitors, who have thinner margins and less brand loyalty to lean on. The limit is consumer tolerance. Repeated price increases push some shoppers to cheaper alternatives, and volume weakness after a pricing round is the signal that the power is fading. Watch volume and price/mix separately in each quarterly report, not just total organic growth.</p>
+<h3>The Oil-Linked Cost Risk</h3>
+<p>The October oil spike is the most direct threat to this thesis. P&G buys petroleum-derived materials, including plastic resins for packaging, polymers for diapers and surfactant feedstocks, and it pays for freight and energy across a global supply chain. If oil stays elevated after the Hormuz attacks, gross margin comes under pressure before price increases catch up, because pricing actions lag costs by several months. Hedging and procurement contracts smooth the impact but do not remove it. This risk is why the target is set conservatively and why the stop-loss is tight. A sustained oil move higher is the clearest reason to reduce the position.</p>
+<h3>Valuation and Crowding Risk</h3>
+<p>Defensive sectors led in October, which means money has already moved toward them. Staples are valued as bond proxies, and a 10-year yield above 4.9% offers an alternative to dividend-paying equities that was not available when yields were low. If the Fed hikes, bond proxies face competition from Treasuries and the multiple can compress even when earnings hold. If the AI trade recovers, the rotation can reverse quickly and PG could lag. We have not verified PG's current price or multiple, so the entry rules below are set relative to the November 2 close and must be checked against a live quote and the stock's own valuation history before acting. Do not chase a gap higher on Monday. The hedge is worth owning at a normal price, not at a crowded one.</p>`,
+    keyMetrics: [
+      { label: "Federal Funds Rate", value: "3.50% – 3.75% (unverified web search)" },
+      { label: "10-Year Treasury Yield", value: "About 4.93% at end of October, after a peak near 5.3% (unverified web search)" }
+    ],
+    recommendedPlay: {
+      action: "Buy PG common shares as a defensive hedge",
+      entry: "Within 3% of the November 2 close; skip or scale in if the stock gaps more than 3% above that close",
+      target: "15% – 20% above entry",
+      stopLoss: "8% below entry on a closing basis",
+      timeframe: "12 months",
+      positionSize: "2–4% of portfolio",
+      justification: "The position is sized as a hedge, not a growth bet. PG gives exposure to stable consumer demand and pricing power at a moment when the market fears an AI-led drawdown and a rate-hike regime. Entry is defined relative to the November 2 close because no verified price is available at publication. The target and stop give roughly a 2:1 reward-to-risk ratio, and the position is smaller than a conviction growth holding because the upside depends on relative performance rather than a catalyst.",
+      keyRisk: "A sustained oil price spike lifts resin, packaging and freight costs faster than P&G can raise prices, compressing gross margin. A Fed rate hike or a rebound in the AI trade could also unwind the defensive rotation and compress the staples multiple.",
+      catalysts: ["Next Fed meeting: hike or hold decision and any change in dissent count", "P&G fiscal Q2 earnings (expected January 2027): price/mix versus volume and gross margin commentary on commodity costs", "Oil price direction after the Strait of Hormuz attacks", "Direction of the 10-year yield relative to the 4.93% October close"]
+    },
+    draft: true
+},
+  {
+    id: "2026-12",
+    month: "December 2026",
+    date: "2026-12-01",
+    title: "NVIDIA After the De-Rating: A Contrarian Entry Into a Rate Shock",
+    subtitle: "NVDA has fallen hard on data-centre slowdown fears, a weak reaction to a strong outlook, and a leadership gap. The setup rewards patience and a small position.",
+    asset: "NVIDIA",
+    ticker: "NVDA",
+    assetClass: "Equity",
+    sector: "Semiconductors",
+    exchange: "NASDAQ",
+    priceAtTime: "NVDA ~$152 (Nov 18 reading, unverified)",
+    targetPrice: "$190 – $205",
+    timeHorizon: "12 months",
+    rating: "Buy",
+    ratingScore: 4,
+    agents: [],
+    tags: ["Semiconductors", "AI", "Data Centre", "Technology"],
+    outcome: "in-progress",
+    outcomeNote: "Scheduled for December 1, 2026. Written November 22, 2026; entry levels refresh on publication. 12-month verdict due December 2027.",
+    macroContext: "This is a pre-published issue, written on November 22, 2026 for release on December 1. Prices below come from unverified web readings and will be refreshed before publication. The market is under pressure: the S&P 500 closed at 7,340.53 on November 17 after a five-session losing streak, and the Nasdaq-100 reportedly lost about $2 trillion of value during November. The federal funds rate sits at 3.50% to 3.75%, and Governor Waller has said he wants a 50 basis point hike at the December 8-9 meeting. A hike into a falling market is the main macro risk for long-duration growth stocks, and NVDA is one of the largest of them.",
+    thesis: "NVDA has de-rated sharply in November. It fell 9.3% on November 5 on fears of a data-centre slowdown, fell again on earnings day around November 18 despite a strong outlook, and touched a 52-week low. One source puts the price near $152 on November 18; another claimed about $180 earlier, and the two readings conflict. One source puts the average analyst target near $252. The case is contrarian: when a stock falls on earnings day despite a strong outlook, the market is pricing worry about the cycle and the macro, not the guidance. The risks are a Fed hike on December 8-9 and an unsettled leadership position, since Nvidia is reportedly under an interim CEO. This is a small, staged position, not a high-conviction call.",
+    body: `<h3>What the Market Is Pricing</h3>
+<p>Three events drove the November decline. On November 5 NVDA fell 9.3% on data-centre slowdown fears. Around November 18 it reported earnings and the shares fell anyway, even though the outlook was described as strong. Soon after, the stock touched a 52-week low. The pattern matters more than any single day. A stock that falls on good guidance is being sold for reasons outside the company's own numbers: positioning, fear that customer spending peaks, and a weak tape. This report does not cite revenue, margin or EPS figures because none of them were verified for this issue. Check the company's latest filing before acting.</p>
+<h3>The Contrarian Case</h3>
+<p>The bull case rests on distance, not on a new fact. One source puts the average analyst target near $252, about 66% above a $152 price. Analyst targets lag price and should not be taken as a forecast. They do show that the sell-side had not cut its view to match the share price. If the data-centre slowdown fear proves early, the gap closes by price recovery. If the fear is correct, the targets fall and the stock may fall further. That is why the stop is set at 15% below the reference price and the position is kept small.</p>
+<h3>The Macro Problem</h3>
+<p>The Federal Reserve meets December 8-9 with the funds rate at 3.50% to 3.75%. Governor Waller wants a 50 basis point hike. Even if the committee does less, the debate itself pushes up the discount rate applied to growth stocks. The Nasdaq-100 has already lost about $2 trillion of value in November, and the S&P 500 had a five-session losing streak into November 17. NVDA is large enough that index selling hits it regardless of its fundamentals. The entry plan therefore stages purchases rather than buying all at once before the Fed meeting.</p>
+<h3>Leadership Uncertainty</h3>
+<p>Nvidia is under an interim CEO. Reports say Jensen Huang will not return to the role. That claim is unverified and is labelled here as reported only. If it holds, the market has to price a company that has been closely tied to one founder-led strategy. A permanent CEO named in the next 12 months, with continuity in the product roadmap, would remove part of the discount. A weak or delayed appointment would add to it. This is the second reason the position size is low and the stop is firm.</p>`,
+    keyMetrics: [
+      { label: "NVDA price (reference)", value: "~$152 (Nov 18 reading, one source, unverified; a conflicting source claimed ~$180 earlier)" },
+      { label: "Average analyst target", value: "~$252 (one source, unverified)" },
+      { label: "Nov 5 move", value: "-9.3% on data-centre slowdown fears (unverified)" }
+    ],
+    recommendedPlay: {
+      action: "Buy common shares in two stages, half before and half after the December 8-9 Fed decision",
+      entry: "$144 – $152 (0% to 5% below the $152 reference; refresh on publication)",
+      target: "$190 – $205 (25% to 35% above $152)",
+      stopLoss: "$129 (about 15% below $152; a close below this level means the de-rating is continuing and the thesis is wrong)",
+      timeframe: "12 months",
+      positionSize: "1–2% of portfolio",
+      justification: "The stock has de-rated on cycle fear and market weakness while the outlook was described as strong. The reference price sits far below the reported average analyst target of about $252. The target range here assumes recovery of roughly a third to a half of that gap, not the full distance. Staging the entry around the Fed meeting limits the damage if a 50 basis point hike is delivered. The size is small because the price data is unverified, the sources conflict, and the leadership position is open.",
+      keyRisk: "A 50 basis point hike on December 8-9 extends the Nasdaq-100 sell-off and pulls NVDA through the stop before any recovery. A second risk is that the data-centre slowdown fears prove right, which would cut the earnings that the analyst targets rest on. A third is a prolonged leadership vacuum or a poorly received CEO appointment.",
+      catalysts: ["Federal Reserve decision, December 8-9, 2026: size of any hike and the tone of the statement", "Naming of a permanent CEO, or confirmation of the reported decision that Jensen Huang will not return", "Evidence from large customers that data-centre spending is holding, which would answer the November 5 slowdown fears", "Recovery of the Nasdaq-100 after the reported $2 trillion November loss"]
+    },
+    draft: true
   }
 ];
