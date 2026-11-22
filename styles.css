@@ -3,7 +3,7 @@
    Editorial print-finance system. Ink, paper, one accent.
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 
 /* ── Tokens ─────────────────────────────────────────────── */
 :root {
@@ -218,16 +218,15 @@ img { display: block; max-width: 100%; }
 }
 
 .masthead-title {
-  font-family: var(--font-display);
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-size: clamp(40px, 7vw, 88px);
-  line-height: 0.98;
-  letter-spacing: -0.02em;
+  font-family: 'Libre Caslon Text', var(--font-display);
+  font-weight: 400;
+  font-size: clamp(38px, 6.4vw, 80px);
+  line-height: 1.04;
+  letter-spacing: -0.015em;
   color: var(--paper);
   margin-bottom: 26px;
 }
-.masthead-title span { color: var(--gold); font-style: italic; font-weight: 500; }
+.masthead-title span { color: var(--gold); font-style: italic; font-weight: 400; }
 
 .masthead-desc {
   font-family: var(--font-body);
